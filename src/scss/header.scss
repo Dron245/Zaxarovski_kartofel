@@ -1,9 +1,94 @@
 //====================================================================================================
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+
+	&__container {
+		max-width: rem(1752);
+		background-color: #fff;
+		border-radius: 0px 0px 10px 10px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		flex: 0 0 percent(303,1752);
+		font-weight: 900;
+		@include adaptiveValue("font-size", 30, 22,1920,320,1);
+		text-transform: uppercase;
+		color: $maingreen;
+	}
+
+	&__menu {
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+	}
+}
+.menu {
+
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 28px;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		padding: 35px 5px;
+	}
+
+	&__link {
+		font-weight: 600;
+		line-height: normal;
+		text-transform: uppercase;
+		transition: color 0.3s;
+		&:hover{
+			color: $maingreen;
+		}
+	}
+
+	&__icon {
+	}
+}
+.social {
+
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		margin-right: 11px;
+	}
+
+	&__link {
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 24px; /* 109.091% */
+	}
+
+	&__text {
+		line-height: 24px;
+	}
+}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -22,7 +107,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: $maingreen;
 		}
 		&::before {
 			top: 0;
@@ -51,4 +136,4 @@
 		}
 	}
 }
-*/
+

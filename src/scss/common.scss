@@ -1,1 +1,27 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.title {
+	font-size: 48px;
+	@include adaptiveValue("font-size", 48, 28,1400,320,1);
+	//font-style: normal;
+	font-weight: 600;
+	line-height: 30px; /* 62.5% */
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	//text-align: center;
+	//font-family: Gilroy;
+	font-size: 20px;
+	//font-style: normal;
+	font-weight: 600;
+	line-height: 24px; /* 120% */
+	text-transform: uppercase;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	border-radius: 15px;
+	background: #FEDF3A;
+	width: 286px;
+}
