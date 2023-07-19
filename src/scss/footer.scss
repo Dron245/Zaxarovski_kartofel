@@ -1,3 +1,54 @@
 //====================================================================================================
+.footer {
+	background-color: $maingreen;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+		padding-block: 52px;
+	}
+
+	&__logo {
+		color: white;
+	}
+
+	&__politicy {
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		&_studio {
+		}
+	}
+
+	&__links {
+		display: flex;
+		@media (max-width:$tablet){
+			flex-direction: column;
+			//justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__text {
+	}
+}
+.header {
+
+	&__logo {
+	}
+}
+.social {
+
+	&__footer-link {
+	}
+}
 
 //====================================================================================================
