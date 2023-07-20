@@ -10,10 +10,15 @@
 		height: 0;
 		opacity: 0;
 		&:focus + .checkbox__label:before {
-			box-shadow: 0 0 5px #000;
+			//box-shadow: 0 0 5px #000;
 		}
 		&:checked + .checkbox__label:before {
-			background: #000;
+			//background: #000;
+		}
+		&:checked + .checkbox__label {
+			& .checkbox__body::after {
+				opacity: 1;
+			}
 		}
 	}
 	// .checkbox__label
@@ -22,17 +27,44 @@
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		gap: 10px;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
-		}
+		gap: 9px;
+		// &:before {
+		// 	content: "";
+		// 	align-self: flex-start;
+		// 	flex: 0 0 15px;
+		// 	width: 15px;
+		// 	height: 15px;
+		// 	border: 1px solid #a7a9ac;
+		// 	transform: translateY(5px);
+		// }
 	}
 	// .checkbox__text
 	&__text {
+	}
+	&__body {
+		position: relative;
+			align-self: center;
+			flex: 0 0 15px;
+			width: 15px;
+			height: 15px;
+			background-color: $maingreen;
+			border-radius: 4px;
+			//border: 1px solid $ma;
+			&::after{
+				content:'';
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 15px;
+				height: 15px;
+				transition: opacity 0.3s ease;
+				//transform: scale(0);
+				opacity: 0;
+				background: url('@img/buy/form-check.svg') 0 0 / cover no-repeat;
+			}
+			@media (max-width:$mobile){
+				 align-self: flex-start;
+				 transform: translateY(1px);
+			}
 	}
 }

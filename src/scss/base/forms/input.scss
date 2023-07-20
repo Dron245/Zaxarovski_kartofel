@@ -9,11 +9,12 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
+	border-radius: 35px !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 10px 20px;
+	background-color: #ececec;
+	//border: 1px solid #eee;
 	&._form-focus {
 	}
 	&._form-error {
@@ -21,5 +22,12 @@ textarea {
 }
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	padding: 10px 17px;
+	//padding-top: 30px;
+	height: 95px;
+}
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder{
+	color: #333;
+	font-size: 14px;
+	line-height: 24px;
 }
