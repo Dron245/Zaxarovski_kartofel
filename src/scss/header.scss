@@ -3,6 +3,7 @@
 	position: fixed;
 	left: 0;
 	right: 0;
+	z-index: 2;
 	//min-height: 91px;
 	&__container {
 		max-width: percent(1752,1920);
