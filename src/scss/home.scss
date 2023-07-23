@@ -1,4 +1,7 @@
 //====================================================================================================
+.fancybox__container {
+	max-width: none !important;
+}
 .page {
 
 	&__grand {
@@ -51,7 +54,7 @@
 		color: white;
 		max-width: 936px;
 		
-		@include adaptiveValue("margin-left", 130, 130,1400,992,1);
+		margin-left: 130px;
 		@media (max-width:$mobile){
 			margin-left: 0;
 		}
@@ -72,11 +75,12 @@
 	}
 
 	&__control {
+		pointer-events: none;
 		position: absolute;
 		display: flex;
     justify-content: space-between;
     padding: 0 180px;
-		z-index: 5;
+		z-index: 1;
 		top: 50%;
 		width: 100%;
 		transform: translateY(-50%);
@@ -88,7 +92,8 @@
 		}
 		@media (max-width:$tablet){
 			padding: 0px 20px;
-			top: 90%;
+			top: initial;
+			bottom: 0%;
 			justify-content: center;
 			gap: 20px;
 		}
@@ -96,6 +101,7 @@
 
 	&__arrow {
 		cursor: pointer;
+		pointer-events: auto;
 	}
 
 	&__button {
@@ -164,6 +170,7 @@
 	}
 
 	&__control {
+		pointer-events: none;
 		display: flex;
 		position: absolute;
 		justify-content: space-between;
@@ -223,6 +230,9 @@
 		@media (max-width:$tablet){
 			align-self: center;
 		}
+		@media (max-width:$mobile){
+			 margin: 0px -15px; 
+		}
 	}
 
 	&__link {
@@ -252,6 +262,7 @@
 		line-height: 26px;
 		span {
 			color: $maingreen;
+			font-weight: 700;
 		}
 		@media (max-width:$mobile){
 			 font-size: rem(16); 
@@ -357,6 +368,7 @@
 	}
 
 	&__control {
+		pointer-events: none;
 		display: flex;
 		position: absolute;
 		justify-content: space-between;
@@ -424,7 +436,13 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 65px 121px;
-
+		margin-bottom: 96px;
+		@media (max-width:$tablet){
+			margin-bottom: 50px;
+		}
+		@media (max-width:$mobile){
+			 margin-bottom: 20px; 
+		}
 	}
 
 	&__item {
@@ -456,6 +474,10 @@
 		text-align: center;
 		font-weight: 500;
 		line-height: 1.2;
+		margin: 0px -30px;
+		@media (max-width:$mobileSmall){
+			 margin: 0px 0px; 
+		}
 	}
 }
 
@@ -464,69 +486,81 @@
 .page {
 
 	&__buy {
+		min-height: 717px;
 		background: 0 0 / cover no-repeat;
 		position: relative;
+		@media (max-width:$tablet){
+			min-height: 600px;
+		}
 		.popup__content {
+			//display: inline-block;
+			transform: translate(60%, 24%);
 			max-width: 614px;
 		visibility: initial;
-		transform: initial;
+		position: relative;
+		z-index: 2;
 		transition: initial;
 		width: initial;
+		@media (max-width: em(1350)){
+			transform: translate(10%, 24%);
+		}
+		@media (max-width:$tablet){
+			transform: initial;
+			margin: 0 auto;
+			margin-top: 0px;
+		}
 		}
 	}
 }
 .buy {
 
+	&__container {
+		max-width: 1920px;
+		position: relative;
+		@media (max-width:$tablet){
+			padding-top: 50px;
+		}
+	}
+
 	&__bg {
 		position: absolute;
 		width: percent(934,1920);
+		width: 934px;
 		height: percent(615,717);
 		right: 0;
 		bottom: 0;
 		z-index: 2;
-	}
-
-	&__form {
-		
-	}
-}
-.popup {
-
-	&__form {
-	}
-
-	&__text {
-	}
-
-	&__checkbox {
-	}
-
-	&__button {
+		@media (max-width: em(1600)){
+			//width: 350px;
+			//aspect-ratio: 1.52/1;
+			transform: translate(25%, 0%);
+		}
+		@media (max-width: em(1200)){
+			transform: translate(35%, 0%);
+		}
+		@media (max-width:$tablet){
+			display: none;
+		}
 	}
 }
-.input {
-}
-.form {
 
-	&__input {
+/*============MAP==========*/
+
+.page {
+
+	&__map {
 	}
 }
-.checkbox {
+.map {
 
-	&__input {
-	}
-
-	&__label {
-	}
-
-	&__body {
-	}
-
-	&__text {
+	&__wrapper {
+		img {
+			width: 100%;
+		}
 	}
 }
-.button {
-}
+
+
 
 
 

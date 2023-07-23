@@ -7,6 +7,64 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__product product" style="background-image: url(img/grand/bg-i.jpg);">
+					<div class="product__container">
+						<span class="product__text">О картофеле</span>
+					</div>
+				</section>
+				<section class="page__video video">
+					<div class="video__container">
+						<div class="video__play">
+							<a href="https://www.youtube.com/watch?v=zF2MRQUtChw" data-fancybox="galleryv" class="video__link">
+								<img src="@img/video/preview.jpg" alt="картофель">
+							</a>
+						</div>
+						<div class="video__content content-video">
+							<h1 class="content-video__title title">Захаровский картофель</h1>
+							<p class="content-video__text"><span>«Захаровский картофель»</span> реализует только высококачественный посадочный материал с самым широким ассортиментом. Все сорта специально подбираются с учетом любых почвенно-климатических условий России, а также возможных хозяйственных признаков. Мы сотрудничаем с ведущими оригинаторами сортов, питомниками и селекционными станциями России.
+							</p>
+							<div class="content-video__trade">
+								<span class="content-video__item">*Стоимость сетки самовывозом -- 625 ₽</span>
+								<span class="content-video__item">*Стоимость сетки с доставкой -- 1000 ₽</span>
+								<span class="content-video__item">*Стоимость от 100 кг договорная.</span>
+								<span class="content-video__item">*Стоимость от тонны шоколадная</span>
+							</div>
+						</div>
+						<p class="content-video__text content-video__text_internal"><span>«Захаровский картофель»</span> реализует только высококачественный посадочный материал с самым широким ассортиментом. Все сорта специально подбираются с учетом любых почвенно-климатических условий России, а также возможных хозяйственных признаков. Мы сотрудничаем с ведущими оригинаторами сортов, питомниками и селекционными станциями России.
+						</p>
+					</div>
+				</section>
+				<section style="background-image: url(img/buy/bg00.jpg);" class="page__buy buy">
+					<div style="background-image: url(img/buy/bg01.png);" class="buy__bg"></div>
+					<div class="buy__container">
+						<div class="buy__form popup__content">
+								<div class="popup__body">
+									<h3 class="popup__title title">Купить картофель</h3>
+									<form action="#" class="popup__form">
+										<input required autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Имя *" class="input form__input">
+										<input required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Телефон *" class="input form__input">
+										<textarea autocomplete="off" name="form[]" placeholder="Сообщение" data-error="Ошибка" class="input"></textarea>
+										<span class="popup__text">Поля отмеченные * обязательны для заполнения.</span>
+										<div class=" checkbox popup__checkbox">
+											<input checked id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label">
+												<div class="checkbox__body"></div>
+												<span class="checkbox__text">
+													Нажимая на кнопку "Отправить", я соглашаюсь с политикой конфиденциальности
+												</span>
+											</label>
+										</div>
+										<button class="popup__button button">Отправить</button>
+									</form>
+								</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__map map">
+					<div class="map__wrapper">
+						<img src="@img/map/map.jpg" alt="Адрес">
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

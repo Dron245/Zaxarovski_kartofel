@@ -82,6 +82,7 @@ body::after {
 	}
 
 	&__form {
+		font-size: 14px;
 		& > *:not(:last-child) {
 			margin-bottom: 15px;
 		}
