@@ -2,6 +2,7 @@
 .fancybox__container {
 	max-width: none !important;
 }
+h1.mb-5 {display: none;}
 .page {
 
 	&__grand {
@@ -135,7 +136,7 @@
 .galery {
 
 	&__container {
-		@media (max-width:$pc){
+		@media (max-width:$mobile){
 			 padding: 0; 
 		}
 	}
@@ -147,7 +148,8 @@
 			margin-bottom: 40px;
 		}
 		@media (max-width:$mobile){
-			 margin-bottom: 20px; 
+			 margin-bottom: 20px;
+			 padding-left: 15px;
 		}
 	}
 
