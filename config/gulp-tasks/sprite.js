@@ -23,9 +23,7 @@ export const sprite = () => {
 					{
 						svgo: {
 							plugins: [
-								{ removeXMLNS: true },
-								{ convertPathData: false },
-								{ removeViewBox: false },
+								'preset-default'
 							]
 						}
 					}
