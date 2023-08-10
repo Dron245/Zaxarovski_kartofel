@@ -37,8 +37,8 @@ h1.mb-5 {display: none;}
 	&__image {
 		width: 100%;
 		//min-height: 862px;
-		padding-bottom: percent(862,1920);
-		
+		// padding-bottom: percent(862,1920);
+		padding-bottom: 44.895833%; /* 862/1920 */
 	}
 
 	&__container {
@@ -529,6 +529,7 @@ h1.mb-5 {display: none;}
 		width: percent(934,1920);
 		width: 934px;
 		height: percent(615,717);
+		height: 85.774059%; /* 615/717 */
 		right: 0;
 		bottom: 0;
 		z-index: 2;
@@ -579,8 +580,8 @@ h1.mb-5 {display: none;}
 	&__wrapper {
 		max-width: 600px;
 		border: 1px solid #333;
-		padding: 20px;
-		border-radius: 20px;
+		padding: 1.25rem;
+		border-radius: 1.25rem;
 		display: flex;
 		flex-direction: column;
 		// gap: 30px;
