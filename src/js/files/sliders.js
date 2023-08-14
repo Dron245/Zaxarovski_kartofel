@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Loop } from 'swiper/modules';
+import { Navigation, Thumbs} from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -280,6 +280,68 @@ function initSliders() {
 			}
 		});
 	}
+
+		// Создаем слайдер
+		var galleryThumbs = new Swiper('.swiper-thumbs__slidertwo', { // Указываем скласс нужного слайдера
+		
+			modules: [Navigation, Thumbs],
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+			// autoHeight: true,
+			speed: 800,
+			loop: true,
+			slideToClickedSlide: true,
+			// centeredSlides: true,
+			// thumbs: {
+			// 	swiper: galleryTop,
+			// },
+		
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				1500: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				}
+			},
+		});
+		// Создаем слайдер
+		var galleryTop = new Swiper('.swiper-thumbs__slider', { // Указываем скласс нужного слайдера
+			
+			modules: [Navigation, Thumbs],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 800,
+			thumbs: {
+					swiper: galleryThumbs,
+				},
+			// touchRatio: 0,
+			// simulateTouch: false,
+			loop: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			 },
+		});	
+	
+		
+	// galleryTop.controller.control = galleryThumbs;
+	// galleryThumbs.controller.control = galleryTop;
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
