@@ -7,6 +7,8 @@
 	box-sizing: content-box;
 	display: flex;
 	position: relative;
+	z-index: 1;
+	transition-property: transform;
 }
 .swiper-vertical {
 	.swiper-wrapper {
