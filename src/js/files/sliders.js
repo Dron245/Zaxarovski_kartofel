@@ -70,106 +70,106 @@ function initSliders() {
 		});
 	}
 
-	const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-		let swiper;
+	// const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+	// 	let swiper;
   
-		breakpoint = window.matchMedia(breakpoint);
+	// 	breakpoint = window.matchMedia(breakpoint);
   
-		const enableSwiper = function(className, settings) {
-		  swiper = new Swiper(className, settings);
+	// 	const enableSwiper = function(className, settings) {
+	// 	  swiper = new Swiper(className, settings);
   
-		  if (callback) {
-			 callback(swiper);
-		  }
-		}
+	// 	  if (callback) {
+	// 		 callback(swiper);
+	// 	  }
+	// 	}
   
-		const checker = function() {
-		  if (breakpoint.matches) {
-			 return enableSwiper(swiperClass, swiperSettings);
-		  } else {
-			 if (swiper !== undefined) swiper.destroy(true, true);
-			 return;
-		  }
-		};
+	// 	const checker = function() {
+	// 	  if (breakpoint.matches) {
+	// 		 return enableSwiper(swiperClass, swiperSettings);
+	// 	  } else {
+	// 		 if (swiper !== undefined) swiper.destroy(true, true);
+	// 		 return;
+	// 	  }
+	// 	};
   
-		breakpoint.addEventListener('change', checker);
-		checker();
-	 }
+	// 	breakpoint.addEventListener('change', checker);
+	// 	checker();
+	//  }
   
-	 resizableSwiper(
-		'(max-width: 1280px)',
-		'.galery__slider',
-		{
-			modules: [Navigation],
-		  loop: true,
-		  spaceBetween: 10,
-		  slidesPerView: 2,
-		  speed: 800,
-		  loop:true,
-		  	navigation: {
-				prevEl: '.arrow-g-left',
-				nextEl: '.arrow-g-right',
-			},
-		},
-	 );
+	//  resizableSwiper(
+	// 	'(max-width: 1280px)',
+	// 	'.galery__slider',
+	// 	{
+	// 		modules: [Navigation],
+	// 	  loop: true,
+	// 	  spaceBetween: 10,
+	// 	  slidesPerView: 2,
+	// 	  speed: 800,
+	// 	  loop:true,
+	// 	  	navigation: {
+	// 			prevEl: '.arrow-g-left',
+	// 			nextEl: '.arrow-g-right',
+	// 		},
+	// 	},
+	//  );
 
-	 resizableSwiper(
-		'(max-width: 1280px)',
-		'.swiper-thumbs__slider',
-		{
-			modules: [Navigation, Thumbs],
-		  loop: true,
-		  spaceBetween: 10,
-		  slidesPerView: 1,
-		  speed: 800,
-		  loop:true,
-		  thumbs: {
-			swiper: swiper,
-		},
-		  	navigation: {
-				nextEl: '.swiper-button-next',
-		 		prevEl: '.swiper-button-prev',
-			},
-		},
-	 );
+	//  resizableSwiper(
+	// 	'(max-width: 1280px)',
+	// 	'.swiper-thumbs__slider',
+	// 	{
+	// 		modules: [Navigation, Thumbs],
+	// 	  loop: true,
+	// 	  spaceBetween: 10,
+	// 	  slidesPerView: 1,
+	// 	  speed: 800,
+	// 	  loop:true,
+	// 	  thumbs: {
+	// 		swiper: swiper,
+	// 	},
+	// 	  	navigation: {
+	// 			nextEl: '.swiper-button-next',
+	// 	 		prevEl: '.swiper-button-prev',
+	// 		},
+	// 	},
+	//  );
 
-	 resizableSwiper(
-		'(max-width: 1280px)',
-		'.swiper-thumbs__slidertwo',
-		{
-			modules: [Navigation, Thumbs],
-		  loop: true,
-		  spaceBetween: 10,
-		  slidesPerView: 1,
-		  speed: 800,
-		  loop:true,
-		  thumbs: {
-			swiper: galleryThumbs,
-		},
-		  	navigation: {
-				nextEl: '.swiper-button-next',
-		 		prevEl: '.swiper-button-prev',
-			},
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-				1500: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				}
-			},
-		},
-	 );
+	//  resizableSwiper(
+	// 	'(max-width: 1280px)',
+	// 	'.swiper-thumbs__slidertwo',
+	// 	{
+	// 		modules: [Navigation, Thumbs],
+	// 	  loop: true,
+	// 	  spaceBetween: 10,
+	// 	  slidesPerView: 1,
+	// 	  speed: 800,
+	// 	  loop:true,
+	// 	  thumbs: {
+	// 		swiper: galleryThumbs,
+	// 	},
+	// 	  	navigation: {
+	// 			nextEl: '.swiper-button-next',
+	// 	 		prevEl: '.swiper-button-prev',
+	// 		},
+	// 		breakpoints: {
+	// 			320: {
+	// 				slidesPerView: 1,
+	// 				spaceBetween: 10,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 2,
+	// 				spaceBetween: 10,
+	// 			},
+	// 			992: {
+	// 				slidesPerView: 3,
+	// 				spaceBetween: 10,
+	// 			},
+	// 			1500: {
+	// 				slidesPerView: 3,
+	// 				spaceBetween: 10,
+	// 			}
+	// 		},
+	// 	},
+	//  );
 
 
 	if (document.querySelector('.otzv__slider')) { // Указываем скласс нужного слайдера
